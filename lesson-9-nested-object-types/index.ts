@@ -1,4 +1,7 @@
 // Here, address needs to be another object
+
+/*
+// This has address defined inline with the Person object:
 type Person = {
     name: string,
     age: number,
@@ -8,6 +11,24 @@ type Person = {
         city: string,
         country: string
     }
+}
+*/
+
+// Or we can define a separate type for the Address alone. This takes sense if we want to use the address type again somewhere else.
+// Challenge: try to figure out how to move the nested address object type
+// into a separate type definition. When done correctly, there should be no more
+// red errors in the editor
+type Address = {
+    street: string,
+    city: string,
+    country: string
+}
+
+type Person = {
+    name: string,
+    age: number,
+    isStudent: boolean,
+    address: Address
 }
 
 let person1: Person = {
