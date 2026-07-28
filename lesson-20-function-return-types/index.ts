@@ -15,6 +15,7 @@ const users: User[] = [
 // The colon : that we put after the arguments of our function allows us to specify what type of data should be returned from our function.
 // This can be inferred by TypeScript, but in many instances, it can be really helpful to explicitly type what should be returned from your function. Especially helps when refactoring.
 // : User
+// Specifying we return a User Object.
 function fetchUserDetails(username: string): User {
     const user = users.find(user => user.username === username);
     if (!user) {
